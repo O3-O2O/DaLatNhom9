@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du lịch Đà Lạt</title>
+</head>
+
+<body style="
+    margin: 0;
+    padding: 0;
+    
+    background-color: #f7f8f4;
+    color: #263b32;
+">
+
+    <style>
+
+        .chu-7-mau {
+            margin-top: 20px;
+            font-weight: bold;
+            animation: doimau 3s infinite;
+            }
+
+        @keyframes doimau {
+            0%   { color: red; }
+            14%  { color: orange; }
+            28%  { color: yellow; }
+            42%  { color: green; }
+            56%  { color: blue; }
+            70%  { color: indigo; }
+            84%  { color: violet; }
+            100% { color: red; }
+        }
+
+        nav > a {
+            transition: 0.3s ease-in-out;
+        }
+
+        nav > a:hover {
+            transform: scale(1.15);
+            font-weight: bold;
+            color: #47745a !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+
+    <!-- HEADER -->
+    <header style="
+        width: 100%;
+        min-height: 300px;
+        background: linear-gradient(120deg, rgba(15,45,35,0.85), rgba(35,75,53,0.55)),
+        url('/image/background.jpg') center/cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        box-sizing: border-box;
+        padding: 40px 20px;
+    ">
+
+        <p style="
+            font-size: 14px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin: 0 0 15px;
+            color: #d6e8d3;
+        ">
+            Welcome to Vietnam
+        </p>
+
+        <h1 style="
+            font-size: clamp(38px, 7vw, 68px);
+            font-weight: 800;
+            letter-spacing: 3px;
+            margin: 0;
+            text-shadow: 0 3px 15px rgba(0,0,0,0.3);
+        ">
+            ĐÀ LẠT
+        </h1>
+
+        <p style="
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin: 15px 0 25px;
+        ">
+            Thành phố ngàn hoa – Xứ sở sương mù
+        </p>
+
+        <a href="#gioi-thieu" style="
+            padding: 13px 30px;
+            background-color: #d4a85b;
+            color: #263b32;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 14px;
+        ">
+            KHÁM PHÁ NGAY
+        </a>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav style="
+        width: 100%;
+        min-height: 65px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 35px;
+        padding: 12px 15px;
+        box-sizing: border-box;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    ">
+
+        <a href="index.html" style="color: #47745a; text-decoration: none; font-weight: bold; padding: 10px;">Trang chủ</a>
+
+        <a href="#" style="color: #42534a; text-decoration: none; padding: 10px;">Văn hóa</a>
+
+        <a href="danh_lam.html" style="color: #42534a; text-decoration: none; padding: 10px;">Danh lam thắng cảnh</a>
+
+        <a href="#" style="color: #42534a; text-decoration: none; padding: 10px;">Ẩm thực</a>
+
+        <a href="#" style="color: #42534a; text-decoration: none; padding: 10px;">Dịch vụ du lịch</a>
+
+        <a href="#" style="color: #42534a; text-decoration: none; padding: 10px;">Chăm sóc khách hàng</a>
+
+    </nav>
+
+
+    <!-- WELCOME -->
+    <div style="
+        background-color: #e9f0e8;
+        text-align: center;
+        padding: 18px 10px;
+        color: #47745a;
+        font-size: 17px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    ">
+        ✦ Chào mừng bạn đến với Đà Lạt – Nơi lưu giữ những khoảnh khắc tuyệt đẹp ✦
+    </div>
+
+    <marquee class="chu-7-mau" style="font-size: 20px; ">Chào mừng đến với Đà Lạt !!!</marquee>
+
+
+    <!-- INTRODUCTION -->
+    <main id="gioi-thieu" style="
+        max-width: 1150px;
+        margin: 50px auto;
+        padding: 0 25px;
+        box-sizing: border-box;
+    ">
+
+        <div style="margin-bottom: 30px;">
+
+            <p style="
+                color: #b58b4e;
+                font-size: 13px;
+                font-weight: bold;
+                letter-spacing: 3px;
+                margin-bottom: 8px;
+            ">
+                ABOUT DA LAT
+            </p>
+
+            <h2 style="
+                font-size: 32px;
+                color: #294c38;
+                margin: 0 0 15px;
+            ">
+                Khám phá thành phố Đà Lạt
+            </h2>
+
+            <p style="
+                color: #718078;
+                font-size: 16px;
+                line-height: 1.8;
+                max-width: 800px;
+            ">
+                Đà Lạt là điểm đến du lịch nổi tiếng với khí hậu mát mẻ,
+                cảnh quan thiên nhiên thơ mộng, những rừng thông xanh
+                và kiến trúc mang đậm dấu ấn lịch sử.
+            </p>
+
+        </div>
+
+
+        <!-- LOCATION CARD -->
+        <section style="
+            background-color: white;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(35,65,45,0.07);
+            margin-bottom: 45px;
+        ">
+
+            <h2 style="
+                font-size: 24px;
+                color: #315d43;
+                margin: 0 0 25px;
+                border-left: 5px solid #d4a85b;
+                padding-left: 15px;
+            ">
+                Vị trí địa lý
+            </h2>
+
+            <ol style="
+                list-style-type: disc;
+                padding-left: 25px;
+                margin: 0;
+                line-height: 2.2;
+                color: #56645c;
+                font-size: 15px;
+            ">
+
+                <li>
+                    <b style="color: #315d43;">Vị trí:</b>
+                    Đà Lạt nằm ở phía Bắc tỉnh Lâm Đồng, cách Thành phố Hồ Chí Minh khoảng 300 km về phía Đông Bắc.
+                </li>
+
+                <li>
+                    <b style="color: #315d43;">Tọa độ địa lý:</b>
+                    Khoảng 11°56′ vĩ độ Bắc và 108°26′ kinh độ Đông.
+                </li>
+
+                <li>
+                    <b style="color: #315d43;">Địa hình:</b>
+                    Chủ yếu là địa hình cao nguyên, đồi núi, thung lũng và rừng thông, có độ cao trung bình khoảng 1.500 m so với mực nước biển.
+                </li>
+
+                <li>
+                    <b style="color: #315d43;">Khí hậu:</b>
+                    Mang đặc trưng khí hậu cao nguyên, quanh năm mát mẻ, nhiệt độ tương đối ôn hòa.
+                </li>
+
+                <li>
+                    <b style="color: #315d43;">Vị trí tiếp giáp:</b>
+                    Đà Lạt nằm trong khu vực cao nguyên Lâm Viên, kết nối với các địa phương lân cận như Đức Trọng, Lạc Dương và Đơn Dương.
+                </li>
+
+            </ol>
+
+        </section>
+
+
+        <!-- NEWS -->
+        <section id="tin-tuc" style="margin-bottom: 50px;">
+
+            <p style="
+                color: #b58b4e;
+                font-size: 13px;
+                font-weight: bold;
+                letter-spacing: 3px;
+            ">
+                LATEST UPDATES
+            </p>
+
+            <h2 style="
+                font-size: 30px;
+                color: #294c38;
+                margin: 0 0 25px;
+            ">
+                Tin tức & sự kiện
+            </h2>
+
+            <div style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 25px;
+            ">
+
+                <!-- NEWS 1 -->
+                <article style="
+                    flex: 1 1 280px;
+                    background-color: white;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+                ">
+
+                    <img
+                        src="/image/tin_tuc_1.jpg"
+                        alt="Phong cảnh thiên nhiên"
+                        style="
+                            width: 100%;
+                            height: 200px;
+                            object-fit: cover;
+                        "
+                    >
+
+                    <div style="padding: 22px;">
+
+                        <p style="color: #b58b4e; font-size: 12px; font-weight: bold;">
+                            DU LỊCH
+                        </p>
+
+                        <h3 style="color: #315d43; font-size: 19px;">
+                            Những địa điểm không thể bỏ lỡ tại Đà Lạt
+                        </h3>
+
+                        <p style="color: #78847c; line-height: 1.7; font-size: 14px;">
+                            Cùng khám phá những địa điểm nổi tiếng với cảnh quan thiên nhiên tuyệt đẹp.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- NEWS 2 -->
+                <article style="
+                    flex: 1 1 280px;
+                    background-color: white;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+                ">
+
+                    <img
+                        src="/image/tin_tuc_2.jpg"
+                        alt="Núi và thiên nhiên"
+                        style="
+                            width: 100%;
+                            height: 200px;
+                            object-fit: cover;
+                        "
+                    >
+
+                    <div style="padding: 22px;">
+
+                        <p style="color: #b58b4e; font-size: 12px; font-weight: bold;">
+                            KHÁM PHÁ
+                        </p>
+
+                        <h3 style="color: #315d43; font-size: 19px;">
+                            Vẻ đẹp thơ mộng của thành phố sương mù
+                        </h3>
+
+                        <p style="color: #78847c; line-height: 1.7; font-size: 14px;">
+                            Đắm mình trong không khí se lạnh và khung cảnh bình yên của Đà Lạt.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- NEWS 3 -->
+                <article style="
+                    flex: 1 1 280px;
+                    background-color: white;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+                ">
+
+                    <img
+                        src="/image/tin_tuc_3.jpg"
+                        alt="Hoa nhiều màu sắc"
+                        style="
+                            width: 100%;
+                            height: 200px;
+                            object-fit: cover;
+                        "
+                    >
+
+                    <div style="padding: 22px;">
+
+                        <p style="color: #b58b4e; font-size: 12px; font-weight: bold;">
+                            VĂN HÓA
+                        </p>
+
+                        <h3 style="color: #315d43; font-size: 19px;">
+                            Đà Lạt – Thành phố ngàn hoa
+                        </h3>
+
+                        <p style="color: #78847c; line-height: 1.7; font-size: 14px;">
+                            Tìm hiểu nét đặc trưng của những loài hoa và lễ hội đặc sắc tại Đà Lạt.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- VIDEO GIỚI THIỆU ĐÀ LẠT -->
+        <section id="video-da-lat" style="
+            margin-bottom: 50px;
+        ">
+
+            <p style="
+                color: #b58b4e;
+                font-size: 13px;
+                font-weight: bold;
+                letter-spacing: 3px;
+            ">
+                EXPLORE DA LAT
+            </p>
+
+            <h2 style="
+                font-size: 30px;
+                color: #294c38;
+                margin: 0 0 15px;
+            ">
+                Giới thiệu về Đà Lạt
+            </h2>
+
+            <p style="
+                color: #718078;
+                font-size: 15px;
+                line-height: 1.8;
+                margin-bottom: 25px;
+            ">
+                Cùng khám phá vẻ đẹp thơ mộng, khí hậu trong lành
+                và những địa điểm du lịch nổi tiếng của thành phố Đà Lạt.
+            </p>
+
+            <div style="
+                width: 100%;
+                max-width: 900px;
+                margin: 0 auto;
+                aspect-ratio: 16 / 9;
+                border-radius: 18px;
+                overflow: hidden;
+                box-shadow: 0 8px 30px rgba(35,65,45,0.15);
+                background-color: #203b2d;
+            ">
+
+                <video
+                    src="/video/phong_canh_da_lat.mp4"
+                    title="Video giới thiệu du lịch Đà Lạt"
+                    controls
+                    preload="metadata"
+                    style="
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                        object-fit: cover;
+                        border-radius: 15px;
+                    ">
+                </video>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer id="lien-he" style="
+        background-color: #203b2d;
+        color: white;
+        padding: 45px 25px;
+        text-align: center;
+    ">
+
+        <h2 style="
+            font-size: 25px;
+            letter-spacing: 2px;
+            margin: 0 0 15px;
+        ">
+            ĐÀ LẠT – THÀNH PHỐ NGÀN HOA
+        </h2>
+
+        <p style="
+            color: #c4d3c7;
+            font-size: 14px;
+            line-height: 1.8;
+        ">
+            Hãy đến và trải nghiệm vẻ đẹp của thành phố mộng mơ!
+        </p>
+
+        <p style="
+            color: #91a99a;
+            font-size: 12px;
+            margin-top: 30px;
+        ">
+            © 2026 Du lịch Đà Lạt. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
