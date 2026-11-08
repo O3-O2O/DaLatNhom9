@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩm thực Đà Lạt | Du lịch Đà Lạt</title>
+</head>
+<body style="margin:0;padding:0;background-color:#f7f8f4;color:#263b32;">
+
+  <!-- CSS bổ trợ cho hiệu ứng và khả năng hiển thị trên điện thoại -->
+    <style>
+        nav > a {
+            transition: 0.3s ease-in-out;
+        }
+
+        nav > a:hover {
+            transform: scale(1.15);
+            font-weight: bold;
+            color: #47745a !important;
+        }
+
+        .chu-7-mau {
+            margin-top: 20px;
+            font-weight: bold;
+            animation: doimau 3s infinite;
+        }
+
+        @keyframes doimau {
+            0%   { color: red; }
+            14%  { color: orange; }
+            28%  { color: yellow; }
+            42%  { color: green; }
+            56%  { color: blue; }
+            70%  { color: indigo; }
+            84%  { color: violet; }
+            100% { color: red; }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .food-card {
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .food-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(35,65,45,.13) !important;
+        }
+
+        @media (max-width: 650px) {
+            .hero-title {
+                font-size: 42px !important;
+            }
+            .food-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .intro-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+
+    <!-- HEADER -->
+    <header style="
+        width: 100%;
+        min-height: 300px;
+        background:
+        linear-gradient(120deg, rgba(15,45,35,0.85), rgba(35,75,53,0.55)),
+        url('image/hero-am-thuc.jpg') center/cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        box-sizing: border-box;
+        padding: 40px 20px;
+    ">
+        <p style="
+        font-size: 14px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        margin: 0 0 15px;
+        color: #d6e8d3;
+        ">TASTE THE HIGHLANDS</p>
+        <h1 class="hero-title" style="
+        font-size: clamp(38px, 7vw, 68px);
+        font-weight: 800;
+        letter-spacing: 3px;
+        margin: 0;
+        text-shadow: 0 3px 15px rgba(0,0,0,.3);
+        ">ẨM THỰC ĐÀ LẠT</h1>
+        <p style="
+        font-size: 18px;
+        letter-spacing: 1.5px;
+        margin: 15px 0 25px;
+        max-width: 700px;
+        line-height: 1.6;
+        ">Hương vị phố núi – Ấm áp, mộc mạc và khó quên</p>
+        <a href="#kham-pha" style="
+        padding: 13px 30px;
+        background-color: #d4a85b;
+        color: #263b32;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 14px;
+        ">KHÁM PHÁ NGAY</a>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav style="
+        width: 100%;
+        min-height: 65px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 35px;
+        padding: 12px 15px;
+        box-sizing: border-box;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    ">
+
+        <a href="index.html" style="color: #42534a; text-decoration: none; padding: 10px; transition: 0.3s ease-in-out;"
+        onmouseover="this.style.transform='scale(1.15)'; this.style.fontWeight='bold'; this.style.color='#47745a';"
+        onmouseout="this.style.transform='scale(1)'; this.style.fontWeight='normal'; this.style.color='#42534a';">
+        Trang chủ
+        </a>
+
+        <a href="vanhoadalat.html" style="color: #42534a; text-decoration: none; padding: 10px; transition: 0.3s ease-in-out;"
+        onmouseover="this.style.transform='scale(1.15)'; this.style.fontWeight='bold'; this.style.color='#47745a';"
+        onmouseout="this.style.transform='scale(1)'; this.style.fontWeight='normal'; this.style.color='#42534a';">
+        Văn hóa
+        </a>
+
+        <a href="danh_lam.html" style="color: #42534a; text-decoration: none; padding: 10px; transition: 0.3s ease-in-out;"
+        onmouseover="this.style.transform='scale(1.15)'; this.style.fontWeight='bold'; this.style.color='#47745a';"
+        onmouseout="this.style.transform='scale(1)'; this.style.fontWeight='normal'; this.style.color='#42534a';">
+        Danh lam thắng cảnh
+        </a>
+
+        <a href="am-thuc.html" style="color: #47745a; text-decoration: none; padding: 10px; font-weight: bold; transition: 0.3s ease-in-out;"
+        onmouseover="this.style.transform='scale(1.15)'; this.style.fontWeight='bold'; this.style.color='#47745a';"
+        onmouseout="this.style.transform='scale(1)'; this.style.fontWeight='bold'; this.style.color='#47745a';">
+        Ẩm thực
+        </a>
+
+        <a href="dich_vu.html" style="color: #42534a; text-decoration: none; padding: 10px; transition: 0.3s ease-in-out;"
+        onmouseover="this.style.transform='scale(1.15)'; this.style.fontWeight='bold'; this.style.color='#47745a';"
+        onmouseout="this.style.transform='scale(1)'; this.style.fontWeight='normal'; this.style.color='#42534a';">
+        Dịch vụ du lịch
+        </a>
+
+        <a href="chamsockhachhang.html" style="color: #42534a; text-decoration: none; padding: 10px; transition: 0.3s ease-in-out;"
+        onmouseover="this.style.transform='scale(1.15)'; this.style.fontWeight='bold'; this.style.color='#47745a';"
+        onmouseout="this.style.transform='scale(1)'; this.style.fontWeight='normal'; this.style.color='#42534a';">
+        Chăm sóc khách hàng
+        </a>
+
+    </nav>
+
+    <!-- WELCOME -->
+    <div style="
+        background-color: #e9f0e8;
+        text-align: center;
+        padding: 18px 10px;
+        color: #47745a;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    ">
+        ✦ Chạm vào hương vị Đà Lạt – thưởng thức trọn vẹn nét riêng phố núi ✦
+    </div>
+
+    <marquee class="chu-7-mau" style="font-size: 20px;">Thưởng thức cùng ẩm thực Đà Lạt !!!</marquee>
+
+    <!-- MAIN CONTENT -->
+    <main id="kham-pha" style="
+        max-width: 1150px;
+        margin: 35px auto;
+        padding: 0 25px;
+        box-sizing: border-box;
+    ">
+        <!-- GIỚI THIỆU -->
+        <section style="margin-bottom: 30px;">
+            <p style="
+                color: #b58b4e;
+                font-size: 13px;
+                font-weight: bold;
+                letter-spacing: 3px;
+                margin: 0 0 8px;
+            ">DALAT CUISINE</p>
+
+            <h2 style="
+                font-size: 30px;
+                color: #294c38;
+                margin: 0 0 10px;
+            ">Khám phá hương vị ẩm thực Đà Lạt</h2>
+
+            <p style="
+                color: #718078;
+                font-size: 16px;
+                line-height: 1.8;
+                max-width: 850px;
+                margin: 0;
+            ">
+                Giữa tiết trời se lạnh của cao nguyên, những món ăn nóng hổi và nguyên liệu tươi ngon tạo nên sức hấp dẫn riêng cho ẩm thực Đà Lạt. Từ món ăn đường phố bình dị đến đặc sản mang đậm dấu ấn địa phương, mỗi hương vị đều góp phần làm nên trải nghiệm đáng nhớ.
+            </p>
+        </section>
+
+        <!-- ĐIỂM NHẤN -->
+        <section class="intro-grid" style="
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 22px;
+            align-items: stretch;
+            margin-bottom: 38px;
+        ">
+            <div style="
+                background-color: white;
+                border-radius: 18px;
+                padding: 28px;
+                box-shadow: 0 5px 25px rgba(35,65,45,.07);
+            ">
+                <h2 style="
+                font-size: 23px;
+                color: #315d43;
+                margin: 0 0 18px;
+                border-left: 5px solid #d4a85b;
+                padding-left: 15px;
+                ">Điều làm nên nét riêng</h2>
+
+                <ul style="
+                    padding-left: 22px;
+                    margin: 0;
+                    line-height: 2.05;
+                    color: #56645c;
+                    font-size: 15px;
+                    ">
+                    <li><b style="color: #315d43;">Khí hậu se lạnh:</b> thích hợp để thưởng thức các món nướng, lẩu và đồ ăn nóng.</li>
+                    <li><b style="color: #315d43;">Nông sản tươi:</b> rau củ, dâu tây và nhiều loại nông sản được trồng tại vùng cao nguyên.</li>
+                    <li><b style="color: #315d43;">Ẩm thực đường phố:</b> đa dạng, gần gũi và thường được thưởng thức tại những khu chợ, con phố nhộn nhịp.</li>
+                    <li><b style="color: #315d43;">Hương vị địa phương:</b> sự kết hợp giữa nguyên liệu quen thuộc và cách chế biến đặc trưng.</li>
+                </ul>
+            </div>
+
+            <div style="
+                border-radius: 18px;
+                overflow: hidden;
+                min-height: 300px;
+                box-shadow: 0 5px 25px rgba(35,65,45,.09);
+            ">
+                <img src="image/lau-ga-la-e.jpg" alt="Bữa ăn với nhiều món ăn hấp dẫn" style="
+                width: 100%;
+                height: 100%;
+                min-height: 300px;
+                object-fit: cover;
+                display: block;
+                ">
+            </div>
+        </section>
+
+        <!-- MÓN ĂN NỔI BẬT -->
+        <section id="mon-ngon" style="margin-bottom: 40px;">
+            <p style="
+                color: #b58b4e;
+                font-size: 13px;
+                font-weight: bold;
+                letter-spacing: 3px;
+                margin: 0 0 8px;
+            ">MUST-TRY DISHES</p>
+
+            <h2 style="
+                font-size: 28px;
+                color: #294c38;
+                margin: 0 0 10px;
+            ">Những món ngon không nên bỏ lỡ</h2>
+
+            <p style="
+                color: #718078;
+                font-size: 15px;
+                line-height: 1.8;
+                margin: 0 0 25px;
+            ">Một chuyến đi Đà Lạt sẽ trọn vẹn hơn khi bạn dành thời gian thưởng thức những món ăn đặc trưng dưới đây.</p>
+
+            <div class="food-grid" style="
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 20px;
+            ">
+                <article class="food-card" style="
+                    background: white;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+                ">
+                    <img src="image/banh-trang-nuong.jpg" alt="Món ăn nóng giòn" style="
+                        width: 100%;
+                        height: 205px;
+                        object-fit: cover;
+                        display: block;
+                    ">
+                    <div style="padding: 18px;">
+                        <p style="
+                        color: #b58b4e;
+                        font-size: 12px;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        margin: 0 0 8px;
+                        ">MÓN ĂN ĐƯỜNG PHỐ</p>
+                        <h3 style="
+                        color: #315d43;
+                        font-size: 19px;
+                        margin: 0 0 10px;
+                        ">Bánh tráng nướng</h3>
+                        <p style="
+                        color: #78847c;
+                        line-height: 1.7;
+                        font-size: 14px;
+                        margin: 0;
+                        ">Lớp bánh tráng giòn rụm cùng trứng, hành lá và nhiều loại topping. Món ăn nóng hổi thường được gọi vui là “pizza Đà Lạt”.</p>
+                    </div>
+                </article>
+
+                <article class="food-card" style="
+                    background: white;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+                ">
+                    <img src="image/lau-ga-la-e.jpg" alt="Món lẩu nóng hổi" style="
+                        width: 100%;
+                        height: 205px;
+                        object-fit: cover;
+                        display: block;
+                    ">
+                    <div style="padding: 18px;">
+                        <p style="
+                        color: #b58b4e;
+                        font-size: 12px;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        margin: 0 0 8px;
+                        ">ĐẶC SẢN PHỐ NÚI</p>
+                        <h3 style="
+                        color: #315d43;
+                        font-size: 19px;
+                        margin: 0 0 10px;
+                        ">Lẩu gà lá é</h3>
+                        <p style="
+                        color: #78847c;
+                        line-height: 1.7;
+                        font-size: 14px;
+                        margin: 0;
+                        ">Nước lẩu nóng thơm, vị chua cay nhẹ hòa cùng thịt gà và lá é tạo nên món ăn đặc biệt hợp với tiết trời se lạnh.</p>
+                    </div>
+                </article>
+
+                <article class="food-card" style="
+                    background: white;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+                ">
+                    <img src="image/banh-mi-xiu-mai.jpg" alt="Món ăn kẹp hấp dẫn" style="
+                        width: 100%;
+                        height: 205px;
+                        object-fit: cover;
+                        display: block;
+                    ">
+                    <div style="padding: 18px;">
+                        <p style="
+                        color: #b58b4e;
+                        font-size: 12px;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        margin: 0 0 8px;
+                        ">BỮA ĂN BÌNH DỊ</p>
+                        <h3 style="
+                        color: #315d43;
+                        font-size: 19px;
+                        margin: 0 0 10px;
+                        ">Bánh mì xíu mại</h3>
+                        <p style="
+                        color: #78847c;
+                        line-height: 1.7;
+                        font-size: 14px;
+                        margin: 0;
+                        ">Chén xíu mại nóng với nước dùng đậm đà, ăn kèm bánh mì giòn là lựa chọn quen thuộc cho bữa sáng ở Đà Lạt.</p>
+                    </div>
+                </article>
+
+                <article class="food-card" style="
+                    background: white;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+                ">
+                    <img src="image/banh-can.jpg" alt="Món bánh ngọt tráng miệng" style="
+                        width: 100%;
+                        height: 205px;
+                        object-fit: cover;
+                        display: block;
+                    ">
+                    <div style="padding: 18px;">
+                        <p style="
+                        color: #b58b4e;
+                        font-size: 12px;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        margin: 0 0 8px;
+                        ">MÓN ĂN VẶT</p>
+                        <h3 style="
+                        color: #315d43;
+                        font-size: 19px;
+                        margin: 0 0 10px;
+                        ">Bánh căn</h3>
+                        <p style="
+                        color: #78847c;
+                        line-height: 1.7;
+                        font-size: 14px;
+                        margin: 0;
+                        ">Những chiếc bánh nhỏ được nướng trong khuôn đất, có lớp vỏ thơm và thường dùng cùng nước chấm xíu mại.</p>
+                    </div>
+                </article>
+
+                <article class="food-card" style="
+                    background: white;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+                ">
+                    <img src="image/dau-tay-da-lat.jpg" alt="Trái cây tươi và dâu" style="
+                        width: 100%;
+                        height: 205px;
+                        object-fit: cover;
+                        display: block;
+                    ">
+                    <div style="padding: 18px;">
+                        <p style="
+                        color: #b58b4e;
+                        font-size: 12px;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        margin: 0 0 8px;
+                        ">NÔNG SẢN ĐÀ LẠT</p>
+                        <h3 style="
+                        color: #315d43;
+                        font-size: 19px;
+                        margin: 0 0 10px;
+                        ">Dâu tây tươi</h3>
+                        <p style="
+                        color: #78847c;
+                        line-height: 1.7;
+                        font-size: 14px;
+                        margin: 0;
+                        ">Dâu tây là một trong những loại nông sản được nhiều du khách yêu thích, có thể thưởng thức tươi hoặc dùng trong các món tráng miệng.</p>
+                    </div>
+                </article>
+
+                <article class="food-card" style="
+                    background: white;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+                ">
+                    <img src="image/kem-bo.jpg" alt="Kem mát lạnh" style="
+                        width: 100%;
+                        height: 205px;
+                        object-fit: cover;
+                        display: block;
+                    ">
+                    <div style="padding: 18px;">
+                        <p style="
+                        color: #b58b4e;
+                        font-size: 12px;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        margin: 0 0 8px;
+                        ">TRÁNG MIỆNG</p>
+                        <h3 style="
+                        color: #315d43;
+                        font-size: 19px;
+                        margin: 0 0 10px;
+                        ">Kem bơ</h3>
+                        <p style="
+                        color: #78847c;
+                        line-height: 1.7;
+                        font-size: 14px;
+                        margin: 0;
+                        ">Sự kết hợp giữa bơ xay béo mịn và kem mát lạnh tạo nên món tráng miệng được nhiều người tìm thử khi đến phố núi.</p>
+                    </div>
+                </article>
+            </div>
+
+            <p style="
+                color: #8a958e;
+                font-size: 12px;
+                line-height: 1.6;
+                margin: 14px 0 0;
+            ">Lưu ý: Ảnh minh họa được tải từ Unsplash; hình ảnh có thể không trùng khớp hoàn toàn với món ăn được mô tả.</p>
+        </section>
+
+        <!-- GỢI Ý TRẢI NGHIỆM -->
+        <section style="
+            background-color: #e9f0e8;
+            border-radius: 18px;
+            padding: 25px;
+            margin-bottom: 35px;
+            ">
+            <p style="
+                color: #b58b4e;
+                font-size: 13px;
+                font-weight: bold;
+                letter-spacing: 3px;
+                margin: 0 0 8px;
+            ">FOOD EXPERIENCE</p>
+
+            <h2 style="
+                font-size: 26px;
+                color: #294c38;
+                margin: 0 0 18px;
+            ">Gợi ý trải nghiệm ẩm thực</h2>
+
+            <div style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 18px;
+            ">
+                <div style="
+                    flex: 1 1 220px;
+                    background: white;
+                    border-radius: 12px;
+                    padding: 18px;
+                ">
+                    <h3 style="
+                        color: #315d43;
+                        margin: 0 0 8px;
+                        font-size: 17px;
+                    ">Buổi sáng</h3>
+                    <p style="
+                        color: #718078;
+                        font-size: 14px;
+                        line-height: 1.7;
+                        margin: 0;
+                    ">Thưởng thức bánh mì xíu mại hoặc bánh căn nóng hổi.</p>
+                </div>
+
+                <div style="
+                    flex: 1 1 220px;
+                    background: white;
+                    border-radius: 12px;
+                    padding: 18px;
+                ">
+                    <h3 style="
+                        color: #315d43;
+                        margin: 0 0 8px;
+                        font-size: 17px;
+                    ">Buổi chiều</h3>
+                    <p style="
+                        color: #718078;
+                        font-size: 14px;
+                        line-height: 1.7;
+                        margin: 0;
+                    ">Dạo chợ, khám phá các món ăn vặt và thưởng thức dâu tây.</p>
+                </div>
+
+                <div style="
+                    flex: 1 1 220px;
+                    background: white;
+                    border-radius: 12px;
+                    padding: 18px;
+                ">
+                    <h3 style="
+                        color: #315d43;
+                        margin: 0 0 8px;
+                        font-size: 17px;
+                    ">Buổi tối</h3>
+                    <p style="
+                        color: #718078;
+                        font-size: 14px;
+                        line-height: 1.7;
+                        margin: 0;
+                    ">Quây quần bên nồi lẩu gà lá é hoặc thưởng thức bánh tráng nướng.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+  <!-- FOOTER -->
+    <footer id="lien-he" style="
+        background-color: #203b2d;
+        color: white;
+        padding: 45px 25px;
+        text-align: center;
+    ">
+
+        <h2 style="
+        font-size: 25px;
+        letter-spacing: 2px;
+        margin: 0 0 15px;
+        ">
+        ĐÀ LẠT – THÀNH PHỐ NGÀN HOA
+        </h2>
+
+        <p style="
+        color: #c4d3c7;
+        font-size: 14px;
+        line-height: 1.8;
+        ">
+        Hãy đến và trải nghiệm vẻ đẹp của thành phố mộng mơ!
+        </p>
+
+        <p style="
+        color: #91a99a;
+        font-size: 12px;
+        margin-top: 30px;
+        ">
+        © 2026 Du lịch Đà Lạt. All rights reserved.
+        </p>
+
+    </footer>
+</body>
+</html>
