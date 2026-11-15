@@ -531,5 +531,112 @@
 
     </footer>
 
+
+    <div id="audioBox" style="
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        background: white;
+        border: 2px solid black;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        cursor: pointer;
+        user-select: none;
+    ">
+        <span style="font-size: 18px;">♫</span>
+
+        <audio
+            id="audioDaLat"
+            src="audio/gioi_thieu_da_lat.mp3"
+            controls
+            autoplay
+            style="width: 220px; height: 35px; cursor: default;"
+        ></audio>
+
+        <select
+            onchange="document.getElementById('audioDaLat').playbackRate = Number(this.value)"
+            onclick="event.stopPropagation()"
+            style="
+                height: 32px;
+                padding: 0 5px;
+                border: 1px solid black;
+                border-radius: 4px;
+                background: white;
+                cursor: pointer;
+            "
+        >
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="1" selected>1x</option>
+            <option value="1.25">1.25x</option>
+            <option value="1.5">1.5x</option>
+            <option value="1.75">1.75x</option>
+            <option value="2">2x</option>
+        </select>
+
+        <script>
+            (() => {
+                const box = document.getElementById("audioBox");
+                let dragging = false;
+                let offsetX = 0;
+                let offsetY = 0;
+
+                box.addEventListener("pointerdown", (e) => {
+                    if (e.target.closest("audio, select")) return;
+
+                    dragging = true;
+                    const rect = box.getBoundingClientRect();
+
+                    offsetX = e.clientX - rect.left;
+                    offsetY = e.clientY - rect.top;
+
+                    box.style.right = "auto";
+                    box.style.bottom = "auto";
+                    box.setPointerCapture(e.pointerId);
+                });
+
+                box.addEventListener("pointermove", (e) => {
+                    if (!dragging) return;
+
+                    const x = Math.max(0, Math.min(
+                        e.clientX - offsetX,
+                        window.innerWidth - box.offsetWidth
+                    ));
+
+                    const y = Math.max(0, Math.min(
+                        e.clientY - offsetY,
+                        window.innerHeight - box.offsetHeight
+                    ));
+
+                    box.style.left = x + "px";
+                    box.style.top = y + "px";
+                });
+
+                box.addEventListener("pointerdown", (e) => {
+                    if (e.target.closest("audio, select")) return;
+
+                    box.style.cursor = "grabbing";
+
+                    // Giữ nguyên phần xử lý kéo thả hiện tại
+                });
+
+                box.addEventListener("pointerup", () => {
+                    dragging = false;
+                    box.style.cursor = "pointer";
+                });
+
+                box.addEventListener("pointercancel", () => {
+                    dragging = false;
+                    box.style.cursor = "pointer";
+                });
+            })();
+        </script>
+    </div>
+
 </body>
 </html>

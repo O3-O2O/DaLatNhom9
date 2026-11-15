@@ -11,10 +11,11 @@
     background-color: #f7f8f4;
     color: #263b32;
 ">
+
     <style>
 
         .chu-7-mau {
-            margin: 12px 0;
+            margin-top: 20px;
             font-weight: bold;
             animation: doimau 3s infinite;
             }
@@ -48,9 +49,12 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.12);
         }
-    </style>
 
-    <!-- HEADER -->
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+<!-- HEADER -->
 
     <!-- HEADER -->
     <header style="
@@ -128,7 +132,6 @@
         top: 0;
         z-index: 100;
     ">
-
         <a href="index.html" style="color: #42534a; text-decoration: none; padding: 10px; transition: 0.3s ease-in-out;"
            onmouseover="this.style.transform='scale(1.15)'; this.style.fontWeight='bold'; this.style.color='#47745a';"
            onmouseout="this.style.transform='scale(1)'; this.style.fontWeight='normal'; this.style.color='#42534a';">
@@ -164,7 +167,6 @@
            onmouseout="this.style.transform='scale(1)'; this.style.fontWeight='normal'; this.style.color='#42534a';">
             Chăm sóc khách hàng
         </a>
-
     </nav>
 
     <!-- WELCOME -->
@@ -200,7 +202,7 @@
             <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch;">
 
                 <!-- DỊCH VỤ 1: TOUR THAM QUAN -->
-                <article class="dia-diem" style="flex: 1 1 235px; min-width: 0; background-color: #f9fbf8; border: 1px solid #e7eee7; border-radius: 14px; overflow: hidden;">
+                <article class="dia-diem" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';" style="flex: 1 1 235px; min-width: 0; background-color: #f9fbf8; border: 1px solid #e7eee7; border-radius: 14px; overflow: hidden;">
                     <img src="image/dich-vu-tour.jpg" alt="Tour tham quan và khám phá Đà Lạt" loading="lazy" style="display: block; width: 100%; height: 185px; object-fit: cover;">
                     <div style="padding: 20px;">
                         <p style="color: #b58b4e; font-size: 12px; font-weight: bold; letter-spacing: 2px; margin: 0 0 8px;">01 · KHÁM PHÁ</p>
@@ -215,7 +217,7 @@
                 </article>
 
                 <!-- DỊCH VỤ 2: LƯU TRÚ -->
-                <article class="dia-diem" style="flex: 1 1 235px; min-width: 0; background-color: #f9fbf8; border: 1px solid #e7eee7; border-radius: 14px; overflow: hidden;">
+                <article class="dia-diem" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';" style="flex: 1 1 235px; min-width: 0; background-color: #f9fbf8; border: 1px solid #e7eee7; border-radius: 14px; overflow: hidden;">
                     <img src="image/dich-vu-luu-tru.jpg" alt="Khách sạn hoặc homestay tại Đà Lạt" loading="lazy" style="display: block; width: 100%; height: 185px; object-fit: cover;">
                     <div style="padding: 20px;">
                         <p style="color: #b58b4e; font-size: 12px; font-weight: bold; letter-spacing: 2px; margin: 0 0 8px;">02 · NGHỈ NGƠI</p>
@@ -230,7 +232,7 @@
                 </article>
 
                 <!-- DỊCH VỤ 3: DI CHUYỂN -->
-                <article class="dia-diem" style="flex: 1 1 235px; min-width: 0; background-color: #f9fbf8; border: 1px solid #e7eee7; border-radius: 14px; overflow: hidden;">
+                <article class="dia-diem" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';" style="flex: 1 1 235px; min-width: 0; background-color: #f9fbf8; border: 1px solid #e7eee7; border-radius: 14px; overflow: hidden;">
                     <img src="image/dich-vu-di-chuyen.jpg" alt="Dịch vụ xe đưa đón và di chuyển tại Đà Lạt" loading="lazy" style="display: block; width: 100%; height: 185px; object-fit: cover;">
                     <div style="padding: 20px;">
                         <p style="color: #b58b4e; font-size: 12px; font-weight: bold; letter-spacing: 2px; margin: 0 0 8px;">03 · DI CHUYỂN</p>
@@ -245,6 +247,107 @@
                 </article>
             </div>
         </section>
+                <!-- ĐỀ XUẤT KHÁCH SẠN -->
+                <section id="khach-san" style="width: 100%; margin-top: 42px; padding-top: 30px; border-top: 1px solid #e7eee7;">
+                    <div style="margin-bottom: 22px;">
+                        <p style="color: #b58b4e; font-size: 13px; font-weight: bold; letter-spacing: 3px; margin: 0 0 8px;">STAY IN DA LAT</p>
+                        <h2 style="font-size: 27px; color: #294c38; margin: 0 0 10px;">Gợi ý khách sạn nổi bật</h2>
+                        <p style="color: #718078; font-size: 14px; line-height: 1.8; margin: 0; max-width: 820px;">Một vài lựa chọn lưu trú để bạn tham khảo khi lên kế hoạch khám phá Đà Lạt. Hãy kiểm tra giá, tình trạng phòng và chính sách đặt phòng trên trang chính thức trước khi đặt.</p>
+                    </div>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch;">
+                        <article onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 14px rgba(35,65,45,0.05)';" style="transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1 1 250px; min-width: 0; background-color: #f9fbf8; border: 1px solid #e7eee7; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 14px rgba(35,65,45,0.05);">
+                            <img src="image/khach-san-dalat-palace.jpg" alt="Dalat Palace Heritage Hotel" loading="lazy" style="display: block; width: 100%; height: 190px; object-fit: cover;">
+                            <div style="padding: 19px;">
+                                <p style="color: #b58b4e; font-size: 11px; font-weight: bold; letter-spacing: 2px; margin: 0 0 8px;">01 · NGHỈ DƯỠNG CAO CẤP</p>
+                                <h3 style="color: #315d43; font-size: 18px; margin: 0 0 9px;">Dalat Palace Heritage Hotel</h3>
+                                <p style="color: #69776e; font-size: 13px; line-height: 1.75; margin: 0 0 14px;">Khách sạn mang phong cách kiến trúc cổ điển, nằm gần hồ Xuân Hương và khu vực trung tâm thành phố.</p>
+                                <a href="https://dalatpalacehotel.com/" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 17px; background-color: #315d43; color: white; text-decoration: none; border-radius: 22px; font-size: 12px; font-weight: bold;">XEM KHÁCH SẠN</a>
+                            </div>
+                        </article>
+
+                        <article onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 14px rgba(35,65,45,0.05)';" style="transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1 1 250px; min-width: 0; background-color: #f9fbf8; border: 1px solid #e7eee7; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 14px rgba(35,65,45,0.05);">
+                            <img src="image/khach-san-ana-mandara.jpg" alt="Ana Mandara Villas Dalat Resort and Spa" loading="lazy" style="display: block; width: 100%; height: 190px; object-fit: cover;">
+                            <div style="padding: 19px;">
+                                <p style="color: #b58b4e; font-size: 11px; font-weight: bold; letter-spacing: 2px; margin: 0 0 8px;">02 · KHÔNG GIAN YÊN TĨNH</p>
+                                <h3 style="color: #315d43; font-size: 18px; margin: 0 0 9px;">Ana Mandara Villas Dalat</h3>
+                                <p style="color: #69776e; font-size: 13px; line-height: 1.75; margin: 0 0 14px;">Khu nghỉ dưỡng gồm các biệt thự phong cách Pháp cổ, phù hợp với du khách yêu thích không gian xanh và sự thư thái.</p>
+                                <a href="https://anamandara-resort.com/" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 17px; background-color: #315d43; color: white; text-decoration: none; border-radius: 22px; font-size: 12px; font-weight: bold;">XEM KHÁCH SẠN</a>
+                            </div>
+                        </article>
+
+                        <article onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 14px rgba(35,65,45,0.05)';" style="transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1 1 250px; min-width: 0; background-color: #f9fbf8; border: 1px solid #e7eee7; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 14px rgba(35,65,45,0.05);">
+                            <img src="image/khach-san-colline.jpg" alt="Hotel Colline Đà Lạt" loading="lazy" style="display: block; width: 100%; height: 190px; object-fit: cover;">
+                            <div style="padding: 19px;">
+                                <p style="color: #b58b4e; font-size: 11px; font-weight: bold; letter-spacing: 2px; margin: 0 0 8px;">03 · NGAY TRUNG TÂM</p>
+                                <h3 style="color: #315d43; font-size: 18px; margin: 0 0 9px;">Hotel Colline</h3>
+                                <p style="color: #69776e; font-size: 13px; line-height: 1.75; margin: 0 0 14px;">Khách sạn ở khu vực trung tâm, thuận tiện để đi bộ đến chợ Đà Lạt và các địa điểm ăn uống, mua sắm.</p>
+                                <a href="https://hotelcolline.com/" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 17px; background-color: #315d43; color: white; text-decoration: none; border-radius: 22px; font-size: 12px; font-weight: bold;">XEM KHÁCH SẠN</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- ĐỀ XUẤT ĐỊA ĐIỂM THAM QUAN -->
+                <section id="tham-quan" style="width: 100%; margin-top: 42px; padding-top: 30px; border-top: 1px solid #e7eee7;">
+                    <div style="margin-bottom: 22px;">
+                        <p style="color: #b58b4e; font-size: 13px; font-weight: bold; letter-spacing: 3px; margin: 0 0 8px;">EXPLORE DA LAT</p>
+                        <h2 style="font-size: 27px; color: #294c38; margin: 0 0 10px;">Địa điểm tham quan không nên bỏ lỡ</h2>
+                        <p style="color: #718078; font-size: 14px; line-height: 1.8; margin: 0; max-width: 820px;">Khám phá vẻ đẹp Đà Lạt qua hồ nước thơ mộng, công trình kiến trúc lâu đời và những vùng đồi xanh mát.</p>
+                    </div>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch;">
+                        <article onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 14px rgba(35,65,45,0.05)';" style="transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1 1 250px; min-width: 0; background-color: #f9fbf8; border: 1px solid #e7eee7; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 14px rgba(35,65,45,0.05);">
+                            <img src="image/ho-xuan-huong.jpg" alt="Hồ Xuân Hương Đà Lạt" loading="lazy" style="display: block; width: 100%; height: 190px; object-fit: cover;">
+                            <div style="padding: 19px;">
+                                <p style="color: #b58b4e; font-size: 11px; font-weight: bold; letter-spacing: 2px; margin: 0 0 8px;">01 · BIỂU TƯỢNG ĐÀ LẠT</p>
+                                <h3 style="color: #315d43; font-size: 18px; margin: 0 0 9px;">Hồ Xuân Hương</h3>
+                                <p style="color: #69776e; font-size: 13px; line-height: 1.75; margin: 0 0 14px;">Hồ nước nằm giữa trung tâm thành phố, thích hợp để tản bộ, ngắm cảnh và tận hưởng không khí trong lành.</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Ho+Xuan+Huong+Da+Lat" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 17px; background-color: #315d43; color: white; text-decoration: none; border-radius: 22px; font-size: 12px; font-weight: bold;">XEM BẢN ĐỒ</a>
+                            </div>
+                        </article>
+
+                        <article onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 14px rgba(35,65,45,0.05)';" style="transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1 1 250px; min-width: 0; background-color: #f9fbf8; border: 1px solid #e7eee7; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 14px rgba(35,65,45,0.05);">
+                            <img src="image/thung-lung-tinh-yeu.jpg" alt="Thung lũng Tình Yêu Đà Lạt" loading="lazy" style="display: block; width: 100%; height: 190px; object-fit: cover;">
+                            <div style="padding: 19px;">
+                                <p style="color: #b58b4e; font-size: 11px; font-weight: bold; letter-spacing: 2px; margin: 0 0 8px;">02 · CẢNH QUAN THƠ MỘNG</p>
+                                <h3 style="color: #315d43; font-size: 18px; margin: 0 0 9px;">Thung lũng Tình Yêu</h3>
+                                <p style="color: #69776e; font-size: 13px; line-height: 1.75; margin: 0 0 14px;">Khu tham quan có hồ, đồi thông và nhiều tiểu cảnh, phù hợp cho chuyến đi cùng gia đình hoặc bạn bè.</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Thung+lung+Tinh+Yeu+Da+Lat" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 17px; background-color: #315d43; color: white; text-decoration: none; border-radius: 22px; font-size: 12px; font-weight: bold;">XEM BẢN ĐỒ</a>
+                            </div>
+                        </article>
+
+                        <article onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 14px rgba(35,65,45,0.05)';" style="transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1 1 250px; min-width: 0; background-color: #f9fbf8; border: 1px solid #e7eee7; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 14px rgba(35,65,45,0.05);">
+                            <img src="image/doi-che-cau-dat.jpg" alt="Đồi chè Cầu Đất" loading="lazy" style="display: block; width: 100%; height: 190px; object-fit: cover;">
+                            <div style="padding: 19px;">
+                                <p style="color: #b58b4e; font-size: 11px; font-weight: bold; letter-spacing: 2px; margin: 0 0 8px;">03 · THIÊN NHIÊN</p>
+                                <h3 style="color: #315d43; font-size: 18px; margin: 0 0 9px;">Đồi chè Cầu Đất</h3>
+                                <p style="color: #69776e; font-size: 13px; line-height: 1.75; margin: 0 0 14px;">Những đồi chè xanh trải dài tạo nên khung cảnh thoáng đãng, thích hợp để ngắm bình minh và chụp ảnh.</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Doi+che+Cau+Dat+Da+Lat" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 17px; background-color: #315d43; color: white; text-decoration: none; border-radius: 22px; font-size: 12px; font-weight: bold;">XEM BẢN ĐỒ</a>
+                            </div>
+                        </article>
+
+                        <article onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 14px rgba(35,65,45,0.05)';" style="transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1 1 250px; min-width: 0; background-color: #f9fbf8; border: 1px solid #e7eee7; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 14px rgba(35,65,45,0.05);">
+                            <img src="image/nha-tho-con-ga.jpg" alt="Nhà thờ Chính tòa Đà Lạt" loading="lazy" style="display: block; width: 100%; height: 190px; object-fit: cover;">
+                            <div style="padding: 19px;">
+                                <p style="color: #b58b4e; font-size: 11px; font-weight: bold; letter-spacing: 2px; margin: 0 0 8px;">04 · KIẾN TRÚC</p>
+                                <h3 style="color: #315d43; font-size: 18px; margin: 0 0 9px;">Nhà thờ Con Gà</h3>
+                                <p style="color: #69776e; font-size: 13px; line-height: 1.75; margin: 0 0 14px;">Công trình kiến trúc nổi bật với tháp chuông có hình con gà trên đỉnh, là điểm dừng chân quen thuộc ở trung tâm Đà Lạt.</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Nha+tho+Con+Ga+Da+Lat" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 17px; background-color: #315d43; color: white; text-decoration: none; border-radius: 22px; font-size: 12px; font-weight: bold;">XEM BẢN ĐỒ</a>
+                            </div>
+                        </article>
+
+                        <article onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 14px rgba(35,65,45,0.05)';" style="transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1 1 250px; min-width: 0; background-color: #f9fbf8; border: 1px solid #e7eee7; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 14px rgba(35,65,45,0.05);">
+                            <img src="image/ga-da-lat.jpg" alt="Ga Đà Lạt" loading="lazy" style="display: block; width: 100%; height: 190px; object-fit: cover;">
+                            <div style="padding: 19px;">
+                                <p style="color: #b58b4e; font-size: 11px; font-weight: bold; letter-spacing: 2px; margin: 0 0 8px;">05 · DI SẢN</p>
+                                <h3 style="color: #315d43; font-size: 18px; margin: 0 0 9px;">Ga Đà Lạt</h3>
+                                <p style="color: #69776e; font-size: 13px; line-height: 1.75; margin: 0 0 14px;">Nhà ga cổ mang nét kiến trúc độc đáo, là địa điểm tham quan và tìm hiểu lịch sử đường sắt tại Đà Lạt.</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Ga+Da+Lat" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 17px; background-color: #315d43; color: white; text-decoration: none; border-radius: 22px; font-size: 12px; font-weight: bold;">XEM BẢN ĐỒ</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
     </main>
 
     <!-- FOOTER -->
